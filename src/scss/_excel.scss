@@ -1,0 +1,49 @@
+.excel {
+  position: relative;
+
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    background: antiquewhite;
+    padding: 8px 4px 0;
+
+    & .input {
+      height: 20px;
+      font-size: 18px;
+      line-height: 22px;
+      color: black;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      outline: none;
+      margin: 0;
+      padding: 2px 7px;
+
+      &:hover {
+        border: 1px solid var(--border-color);
+      }
+
+      &:focus {
+        border: 2px solid #1a73e8;
+      }
+    }
+
+    & .button {
+      & span {
+        cursor: pointer;
+        padding: 3px;
+
+        &:hover {
+          background: #ccc;
+        }
+
+        &:active {
+          color: red;
+        }
+      }
+    }
+  }
+}
