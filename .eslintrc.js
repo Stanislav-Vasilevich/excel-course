@@ -16,4 +16,5 @@ module.exports = {
     'no-trailing-spaces': 'off',
     'operator-linebreak': 'off',
   },
+  eslintPath: 'eslint/use-at-your-own-risk',
 };
