@@ -41,6 +41,7 @@ module.exports = (env, argv) => {
   console.log('isDev: ', isDev);
 
   return {
+    mode: 'development',
     target: 'web',
     context: path.resolve(__dirname, 'src'),
     entry: {
