@@ -1,7 +1,7 @@
-import {ExcelComponent} from "@core/ExcelComponent";
+import {ExcelComponent} from "./../../core/ExcelComponent.js";
 
 export class Table extends ExcelComponent {
-  static className = 'excel_table';
+  static className = 'excel__table';
 
   toHTML() {
     return `

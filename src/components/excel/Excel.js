@@ -1,4 +1,4 @@
-import {$} from "@core/dom";
+import {$} from "./../../core/dom.js";
 
 export class Excel {
   constructor(selector, options) {

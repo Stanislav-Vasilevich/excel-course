@@ -1,7 +1,7 @@
-import {ExcelComponent} from "@core/ExcelComponent";
+import {ExcelComponent} from "./../../core/ExcelComponent.js";
 
 export class Formula extends ExcelComponent {
-  static className = 'excel_formula';
+  static className = 'excel__formula';
 
   toHTML() {
     return `

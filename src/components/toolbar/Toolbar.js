@@ -1,32 +1,32 @@
-import {ExcelComponent} from "@core/ExcelComponent";
+import {ExcelComponent} from "./../../core/ExcelComponent.js";
 
 export class Toolbar extends ExcelComponent {
-  static className = 'excel_toolbar';
+  static className = 'excel__toolbar';
 
   toHTML() {
     return `
       <div class="button">
-        <i class="material-icons">format_align_left</i>
+        <span class="material-symbols-outlined">format_align_left</span>
       </div>
 
       <div class="button">
-        <i class="material-icons">format_align_center</i>
+        <span class="material-symbols-outlined">format_align_center</span>
       </div>
 
       <div class="button">
-        <i class="material-icons">format_align_right</i>
+        <span class="material-symbols-outlined">format_align_right</span>
       </div>
 
       <div class="button">
-        <i class="material-icons">format_bold</i>
+        <span class="material-symbols-outlined">format_bold</span>
       </div>
 
       <div class="button">
-        <i class="material-icons">format_italic</i>
+        <span class="material-symbols-outlined">format_italic</span>
       </div>
 
       <div class="button">
-        <i class="material-icons">format_underlined</i>
+        <span class="material-symbols-outlined">format_underlined</span>
       </div>
     `;
   }

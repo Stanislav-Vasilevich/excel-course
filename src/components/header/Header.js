@@ -1,7 +1,7 @@
-import {ExcelComponent} from "@core/ExcelComponent";
+import {ExcelComponent} from "./../../core/ExcelComponent.js";
 
 export class Header extends ExcelComponent {
-  static className = 'excel_header';
+  static className = 'excel__header';
 
   toHTML() {
     return `
@@ -9,11 +9,11 @@ export class Header extends ExcelComponent {
 
       <div>
         <div class="button">
-          <i class="material-icons">delete</i>
+          <span class="material-symbols-outlined">delete</span>
         </div>
 
         <div class="button">
-          <i class="material-icons">exit_to_app</i>
+          <span class="material-symbols-outlined">exit_to_app</span>
         </div>
       </div>
     `;
