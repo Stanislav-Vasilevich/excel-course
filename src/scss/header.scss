@@ -1,12 +1,12 @@
-@import "variables";
-@import "mixins";
+@use "variables";
+@use "mixins";
 
 .excel__header {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: $header-height;
+  height: variables.$header-height;
   display: flex;
   justify-content: space-between;
   padding: 8px 4px 0;
@@ -23,7 +23,7 @@
     margin: 0;
 
     &:hover {
-      border: 1px solid $border-color;
+      border: 1px solid variables.$border-color;
     }
 
     &:focus {
@@ -32,6 +32,6 @@
   }
 
   & .button {
-    @include button(green);
+    @include mixins.button(green);
   }
 }

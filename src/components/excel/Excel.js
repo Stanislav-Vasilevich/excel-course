@@ -1,25 +1,28 @@
-import {$} from "./../../core/dom.js";
+import {$} from './../../core/dom.js';
 
 export class Excel {
   constructor(selector, options) {
-    this.$el = document.querySelector(selector);
-    this.components = options.components || [];
+    this.$el = $(selector)
+    this.components = options.components || []
   }
 
   getRoot() {
-    const $root = $.create('div', 'excel');
+    const $root = $.create('div', 'excel')
 
-    this.components.forEach(Component => {
-      const $el = $.create('div', Component.className);
-      const component = new Component($el);
-      $el.html(component.toHTML());
-      $root.append($el);
+    this.components = this.components.map(Component => {
+      const $el = $.create('div', Component.className)
+      const component = new Component($el)
+      $el.html(component.toHTML())
+      $root.append($el)
+      return component
     })
 
-    return $root;
+    return $root
   }
 
   render() {
-    this.$el.append(this.getRoot().$el);
+    this.$el.append(this.getRoot())
+
+    this.components.forEach(component => component.init())
   }
 }

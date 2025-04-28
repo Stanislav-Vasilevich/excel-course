@@ -1,7 +1,7 @@
-import {ExcelComponent} from "./../../core/ExcelComponent.js";
+import {ExcelComponent} from './../../core/ExcelComponent.js';
 
 export class Table extends ExcelComponent {
-  static className = 'excel__table';
+  static className = 'excel__table'
 
   toHTML() {
     return `
@@ -128,6 +128,6 @@ export class Table extends ExcelComponent {
           <div class="cell">C3</div>
         </div>
       </div>
-    `;
+    `
   }
 }

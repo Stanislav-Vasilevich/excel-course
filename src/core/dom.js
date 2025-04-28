@@ -2,44 +2,50 @@ class Dom {
   constructor(selector) {
     this.$el = typeof selector === 'string'
       ? document.querySelector(selector)
-      : selector;
+      : selector
   }
 
   html(html) {
-    if(typeof html === 'string') {
-      this.$el.innerHTML = html;
-
-      return this;
+    if (typeof html === 'string') {
+      this.$el.innerHTML = html
+      return this
     }
-
-    return this.$el.outerHTML.trim();
+    return this.$el.outerHTML.trim()
   }
 
   clear() {
-    this.html('');
+    this.html('')
+    return this
+  }
 
-    return this;
+  on() {
+
   }
 
   append(node) {
-    if(Element.prototype.append) {
-      this.$el.append(node.$el);
-    } else {
-      this.$el.appendChild(node.$el);
+    if (node instanceof Dom) {
+      node = node.$el
     }
+
+    if (Element.prototype.append) {
+      this.$el.append(node)
+    } else {
+      this.$el.appendChild(node)
+    }
+
+    return this
   }
 }
 
+// event.target
 export function $(selector) {
-  return new Dom(selector);
+  return new Dom(selector)
 }
 
 $.create = (tagName, classes = '') => {
-  const el = document.createElement(tagName);
-
+  const el = document.createElement(tagName)
   if (classes) {
-    el.classList.add(classes);
+    el.classList.add(classes)
   }
-
-  return $(el);
+  return $(el)
 }

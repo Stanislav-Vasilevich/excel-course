@@ -1,8 +1,8 @@
-@import "header.scss";
-@import "toolbar.scss";
-@import "formula.scss";
-@import "table.scss";
-@import "dashboard";
+@use "header.scss";
+@use "toolbar.scss";
+@use "formula.scss";
+@use "table.scss";
+@use "dashboard";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 
 * {
